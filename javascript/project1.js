@@ -4,6 +4,7 @@
  window.onload = ()=>{
     main();
  }
+ 
  function main(){
     const root =document.getElementById("root");
     const btn = document.getElementById("change-btn");
@@ -21,6 +22,3 @@ function generatRGBColor(){
     const blue = Math.floor(Math.random() * 255);
     return `rgb(${red}, ${green}, ${blue})`
 }
-
-// step 3: collect all neccessary references
-//step 4: handle the click event
