@@ -15,7 +15,12 @@ window.onload = ()=>{
     })
     copyBtn.addEventListener('click', function(){
         navigator.clipboard.writeText(output.value);
-        generateToastMsg(`Your color : ${output.value} copied`); 
+        if(isValidHex(output.value)){
+            generateToastMsg(`Your color : ${output.value} copied`); 
+        }
+        else{
+            alert("Invalid Color Code");
+        }
         output.value = "";
     })
     output.addEventListener('keyup', function(e){
