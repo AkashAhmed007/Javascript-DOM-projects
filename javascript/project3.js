@@ -4,14 +4,19 @@ window.onload = ()=>{
  
  function main(){
     const root = document.getElementById("root");
-    const btn = document.getElementById("change-btn");
+    const changeBtn = document.getElementById("change-btn");
     const output = document.getElementById("output");
+    const copyBtn = document.getElementById("copy");
     
-    btn.addEventListener('click',function(){
+    changeBtn.addEventListener('click',function(){
         const bgcolor = generatHEXColor();
         root.style.backgroundColor = bgcolor;
         output.value = bgcolor;
     })
+    copyBtn.addEventListener('click', function(){
+        navigator.clipboard.writeText(output.value);
+    })
+
  }
  function generatHEXColor(){
     const red = Math.floor(Math.random() * 255);
